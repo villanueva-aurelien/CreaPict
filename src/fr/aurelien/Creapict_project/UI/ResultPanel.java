@@ -130,6 +130,7 @@ public class ResultPanel
                         CreateModel.setTab(_jTab,i,j);
                     }
                 }
+                c.writeFile();
             }    
         });
 

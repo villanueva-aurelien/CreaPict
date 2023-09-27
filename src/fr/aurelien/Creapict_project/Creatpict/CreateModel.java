@@ -18,6 +18,7 @@ public class CreateModel
         _tab = new String[indexA][indexB];
         _fileName = fileName;
         _filePath = file;
+
     }
 
     private void applicateValue()
@@ -43,7 +44,7 @@ public class CreateModel
         _tab[x][y] = jtab[x][y].getText();
     }
 
-    private void writeFile()
+    public void writeFile()
     {
         File file = new File(_filePath, _fileName);
 
@@ -57,20 +58,31 @@ public class CreateModel
             FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
             BufferedWriter bw = new BufferedWriter(fw);
             
-            for(int i = 0; i < _tab.length-1; i++)
+            for(int i = 0; i < _tab.length; i++)
             {
-                for(int j = 0; j < _tab[i].length-1; j++)
+                if(i == 0)
+                    bw.write("{\n");
+                for(int j = 0; j < _tab[i].length; j++)
                 {
-                    if(j == _tab[i].length-2)
+                    if(j == 0)
+                        bw.write("{");                    
+
+                    if(j == _tab[i].length-1)
+                    {
+                        bw.write( _tab[i][j]+ "}");
                         continue;
+                    }
 
-                    bw.write("{{"+ _tab[i][j] + ',');
-                    bw.close();
+                    bw.write( _tab[i][j] + ",");
                 }
-
-                bw.write("},\n");
-                bw.close();
+                if(i == _tab.length-1)
+                {
+                    bw.write("\n};");
+                    continue;
+                }
+                bw.write(",\n");
             }
+            bw.close();
         }
         catch (IOException e)
         {
