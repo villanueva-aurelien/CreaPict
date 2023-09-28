@@ -115,7 +115,8 @@ public class SettingPanel extends JPanel
                 }  
                         
                 convertNameAndPath();
-                ResultPanel r = new ResultPanel(a, b, _tabSrStrings);
+                //ResultPanel r = new ResultPanel(a, b, _tabSrStrings);
+                Result r = new Result(a, b, _tabSrStrings);
                 updateMainApp(r.getPanel());
             }    
         });

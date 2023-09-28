@@ -19,7 +19,7 @@ public class MainWindow
         //_jf.setResizable(false);
         _jf.setSize(_sizeX, _sizeY);
 
-        _jf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        _jf.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         _jf.setLocationRelativeTo(null);
 
         _jf.addWindowListener(new WindowAdapter()

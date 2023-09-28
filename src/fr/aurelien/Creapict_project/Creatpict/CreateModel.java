@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class CreateModel
@@ -21,29 +22,21 @@ public class CreateModel
 
     }
 
-    private void applicateValue()
-    {
-        
-    }
-
-    public static void displayResult(int i, int j)
-    {
-        /* for(int i = 0; i < _tab.length; i++)
-        {
-            for(int j = 0; j < _tab[i].length; j++)
-            {
-                System.out.println(_tab[i][j]);
-            }
-        } */
-        System.out.println(_tab[i][j]);
-            
-    }
-
-    public static void setTab(JTextField[][] jtab, int x, int y)
+    /**
+     * This method transfer values ".getText()" ​​from jtab to _tab.
+     * @param jtab
+     * @param x
+     * @param y
+     */
+    public static void setTab(JLabel[][] jtab, int x, int y)
     {
         _tab[x][y] = jtab[x][y].getText();
     }
 
+
+    /**
+     * This method creates a file with predefined options.
+     */
     public void writeFile()
     {
         File file = new File(_filePath, _fileName);
