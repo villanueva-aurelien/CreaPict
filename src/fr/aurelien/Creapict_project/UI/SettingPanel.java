@@ -32,10 +32,9 @@ public class SettingPanel extends JPanel
 
     public SettingPanel()
     {
-
         this.setLayout(new GridLayout(5, 1));
         _selectDir = new JLabel("Select Dir");
-        _nameFile = new JLabel("File name .java");
+        _nameFile = new JLabel("File name .txt");
         _numberRow = new JLabel("Number of Row");
         _numberCol = new JLabel("Number of Col");
 
@@ -115,7 +114,7 @@ public class SettingPanel extends JPanel
                 }  
                         
                 convertNameAndPath();
-                //ResultPanel r = new ResultPanel(a, b, _tabSrStrings);
+                //ResultPanel r = new ResultPanel(a, b, _tabSrStrings); // Ancienne version avec des JTextField
                 Result r = new Result(a, b, _tabSrStrings);
                 updateMainApp(r.getPanel());
             }    
@@ -156,7 +155,7 @@ public class SettingPanel extends JPanel
 
     private void convertNameAndPath()
     {
-        _tabSrStrings[0] = _file.getText();
+        _tabSrStrings[0] = _file.getText() + ".txt";
         _tabSrStrings[1] = _dirSelected.getFile().getPath();
     }
 
@@ -164,6 +163,7 @@ public class SettingPanel extends JPanel
     {
         if(a == null && b == null)
             return;
+
         JDialog jd = new JDialog();
         jd.setLayout(new GridLayout(3, 1));
         JLabel jl = new JLabel();
