@@ -29,6 +29,7 @@ public class SettingPanel extends JPanel
     private GridBagConstraints _constraints = new GridBagConstraints();
 
     private String _valueA, _valueB;
+    private int _indexCheckRegA, _indexCheckRegB;
 
     public SettingPanel()
     {
@@ -83,14 +84,16 @@ public class SettingPanel extends JPanel
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                int a = 0;
-                int b = 0;
                 try
                 {
+                    _indexCheckRegA = 0;
+                    _indexCheckRegB = 0;
+                    _resultVerif = 0;
+
                     if(!_row.getText().isEmpty())
-                        a = Integer.parseInt(_row.getText());
+                        _indexCheckRegA = Integer.parseInt(_row.getText());
                     if(!_col.getText().isEmpty())
-                        b = Integer.parseInt(_col.getText());
+                        _indexCheckRegB = Integer.parseInt(_col.getText());
 
                     _valueA = _row.getText();
                     _valueB = _col.getText();
@@ -115,7 +118,7 @@ public class SettingPanel extends JPanel
                         
                 convertNameAndPath();
                 //ResultPanel r = new ResultPanel(a, b, _tabSrStrings); // Ancienne version avec des JTextField
-                Result r = new Result(a, b, _tabSrStrings);
+                Result r = new Result(_indexCheckRegA, _indexCheckRegB, _tabSrStrings);
                 updateMainApp(r.getPanel());
             }    
         });
@@ -130,6 +133,8 @@ public class SettingPanel extends JPanel
     {
         String a = null;
         String b = null;
+
+        _validateVerif = false;
 
         if(_resultVerif == 3)
         {
@@ -162,7 +167,9 @@ public class SettingPanel extends JPanel
     private void displayError(String a, String b)
     {
         if(a == null && b == null)
+        {
             return;
+        }
 
         JDialog jd = new JDialog();
         jd.setLayout(new GridLayout(3, 1));

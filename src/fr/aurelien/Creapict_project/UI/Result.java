@@ -41,7 +41,7 @@ public class Result
     private int _height = 15;
     private JLabel [][] _jTab;
     private JLabel[] _jlTab;
-    private Color[] _color = {null, Color.BLACK, Color.WHITE, Color.YELLOW, Color.RED, Color.BLUE };
+    private Color[] _color = {null, Color.BLACK, Color.WHITE, Color.YELLOW, Color.RED, Color.BLUE, Color.GREEN, Color.ORANGE, Color.PINK };
     private Color _defaultColor = null;
     private String _filePath, _fileName;
     private String _indexColor;
