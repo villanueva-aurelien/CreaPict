@@ -209,6 +209,7 @@ public class Result
             {
                 _jlTab[i].setForeground(Color.white);
             }
+            _jlTab[i].setBorder(new LineBorder(Color.BLACK));
             _jlTab[i].setOpaque(true);
             _uper.add(_jlTab[i]);
 
