@@ -8,7 +8,7 @@ This project help to create picture 2D for your software !
 Launche software and enter your preference.
 Select directory, select file name, number of rows and columns.
 
-![prog1](https://github.com/villanueva-aurelien/CreatPict/assets/131599506/bc340369-e512-4e0c-9c55-10952ab23431)
+![prog1](https://github.com/villanueva-aurelien/CreatPict/assets/131599506/89f26108-d5c6-434e-8ff1-f644f02b5c40)
 
 This grid have 20 x 20 square.
 
