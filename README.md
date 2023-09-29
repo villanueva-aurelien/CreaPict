@@ -20,5 +20,4 @@ Complet your picture, select color and applicate on square with mouse.
 
 Result of the image for your software in a 2-dimensional table, ready to be added to your code.
 
-![prog4](https://github.com/villanueva-aurelien/CreatPict/assets/131599506/9aca5af1-7485-44e9-b774-48c47ebe7923)
-
+![prog4](https://github.com/villanueva-aurelien/CreatPict/assets/131599506/562775eb-d275-4f81-a028-517faafb59ae)
