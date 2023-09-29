@@ -12,7 +12,8 @@ Select directory, select file name, number of rows and columns.
 
 This grid have 20 x 20 square.
 
-![prog2](https://github.com/villanueva-aurelien/CreatPict/assets/131599506/a7400110-2aee-423d-b762-5b369f8ee821)
+![prog2](https://github.com/villanueva-aurelien/CreatPict/assets/131599506/a7400110-2aee-423d-b762-5b369f8ee821) ![image](https://github.com/villanueva-aurelien/CreatPict/assets/131599506/bd9905a2-de69-4c01-b4e5-9b2bf2d2e759)
+
 
 Complet your picture, select color and applicate on square with mouse.
 
