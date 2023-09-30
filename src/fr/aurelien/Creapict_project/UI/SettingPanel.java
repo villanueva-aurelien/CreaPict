@@ -89,9 +89,10 @@ public class SettingPanel extends JPanel
                     _indexCheckRegA = 0;
                     _indexCheckRegB = 0;
                     _resultVerif = 0;
-
+                   
                     if(!_row.getText().isEmpty())
                         _indexCheckRegA = Integer.parseInt(_row.getText());
+                   
                     if(!_col.getText().isEmpty())
                         _indexCheckRegB = Integer.parseInt(_col.getText());
 
@@ -113,7 +114,26 @@ public class SettingPanel extends JPanel
                 }
                 catch (NumberFormatException ex)
                 {
-                    ex.printStackTrace();
+                    JDialog jd = new JDialog();
+                    jd.setLayout(new FlowLayout());
+                    JLabel jl = new JLabel("Veuillez entrer un nombre dans les champs correspondant !!");
+                    jd.add(jl);
+
+                    JButton close = new JButton("Close");
+                    close.addActionListener(new ActionListener()
+                    {
+                        @Override
+                        public void actionPerformed(ActionEvent e)
+                        {
+                            jd.dispose();
+                        }
+                    });
+
+                    jd.setLocationRelativeTo(null);
+                    jd.setBounds(900, 500, 400, 300);
+                    jd.add(close);
+                    jd.setVisible(true);
+                    return;
                 }  
                         
                 convertNameAndPath();

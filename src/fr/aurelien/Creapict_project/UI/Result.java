@@ -1,27 +1,20 @@
 package fr.aurelien.Creapict_project.UI;
 
-import java.applet.Applet;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.File;
-
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
-import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
 import fr.aurelien.Creapict_project.Creatpict.CreateModel;
@@ -41,7 +34,7 @@ public class Result
     private int _height = 15;
     private JLabel [][] _jTab;
     private JLabel[] _jlTab;
-    private Color[] _color = {null, Color.BLACK, Color.WHITE, Color.YELLOW, Color.RED, Color.BLUE, Color.GREEN, Color.ORANGE, Color.PINK };
+    private Color[] _color = {null, Color.BLACK, Color.WHITE, Color.YELLOW, Color.RED, Color.BLUE, Color.GREEN, Color.ORANGE, Color.PINK, Color.LIGHT_GRAY };
     private Color _defaultColor = null;
     private String _filePath, _fileName;
     private String _indexColor;
